@@ -15,7 +15,6 @@
 #
 def triangle(a, b, c)
   sorted = [a,b,c].sort
-  puts sorted
   min = sorted[0]; med = sorted[1]; max = sorted[2]
   raise TriangleError if min <= 0
   raise TriangleError if min + med <= max
