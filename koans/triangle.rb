@@ -14,7 +14,19 @@
 #   about_triangle_project_2.rb
 #
 def triangle(a, b, c)
-  # WRITE THIS CODE
+  sorted = [a,b,c].sort
+  puts sorted
+  min = sorted[0]; med = sorted[1]; max = sorted[2]
+  raise TriangleError if min <= 0
+  raise TriangleError if min + med <= max
+
+  if a == b and b == c
+    :equilateral
+  elsif a == b or a == c or b == c
+      :isosceles
+  else
+    :scalene
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
